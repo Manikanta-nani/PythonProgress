@@ -1,1 +1,166 @@
+This is an **intense, execution-focused 90-day roadmap**. To achieve "expert" status in 3 months requires approximately 15–20 hours of focused work per week. This plan assumes you are already comfortable with basic Python syntax.
 
+**The Strategy:**
+*   **Weekdays (Mon-Fri):** Deep dive into concepts, math theory, and coding exercises.
+*   **Weekends (Sat-Sun):** Large-scale project building and documentation.
+*   **Rule of Thumb:** If you don't have code on your screen or a notebook open, you aren't learning.
+
+---
+
+### 🟢 Month 1: The Foundation & Classical ML (Days 1–30)
+**Goal:** Master data manipulation, understand statistical learning theory, and master Scikit-Learn.
+
+#### **Week 1: Data Engineering & EDA Mastery**
+*Focus: Getting clean data to feed into models.*
+
+*   **Day 1:** **Environment & Math Refresh.** Install Anaconda/VS Code. Review Linear Algebra (Vectors, Matrices, Dot Products) and Calculus (Derivatives, Chain Rule). Read 3Blue1Brown "Essence of Linear Algebra."
+*   **Day 2:** **Python for Data Science.** Deep dive into `NumPy` (broadcasting, reshaping) and `Pandas` (groupby, merging, pivoting). *Exercise: Clean a messy CSV file with missing values.*
+*   **Day 3:** **Data Visualization.** Master `Matplotlib` and `Seaborn`. Learn to detect outliers and distribution shapes. *Exercise: Visualize the Titanic dataset correlations.*
+*   **Day 4:** **Exploratory Data Analysis (EDA).** Learn feature engineering basics. Create dummy features (time-based, binning).
+*   **Day 5:** **Project Kickoff.** Download the "Titanic" or "House Prices" dataset. Build a full EDA notebook: Summary stats, pairplots, missing value imputation strategies.
+*   **Day 6:** **Supervised Learning - Regression.** Learn Linear and Logistic Regression. Implement from scratch (using Numpy) then with `sklearn`. Understand Cost Functions (MSE, Cross Entropy).
+*   **Day 7:** **Project Work (Weekend).** Complete the Titanic Survival Prediction using only Linear/Logistic Regression. Write a report on which features matter most. Deploy a simple Streamlit demo.
+
+#### **Week 2: Decision Trees & Ensemble Methods**
+*Focus: Handling non-linear relationships.*
+
+*   **Day 8:** **Decision Trees.** Understand ID3, C4.5, CART algorithms. Learn Gini Impurity and Entropy.
+*   **Day 9:** **Pruning Overfitting.** Implement Cross-Validation (K-Fold) and train/test splits. Study Bias-Variance tradeoff mathematically.
+*   **Day 10:** **Random Forests.** Understand Bagging, Bootstrapping, and Feature Importance. Why is Random Forest better than a single Decision Tree?
+*   **Day 11:** **Gradient Boosting (XGBoost/LightGBM).** Study AdaBoost and GBM principles. Implement XGBoost and tune basic hyperparameters.
+*   **Day 12:** **Support Vector Machines (SVM).** Understand Kernels (Linear, RBF, Polynomial) and the Margin concept. Use `sklearn` to compare SVM vs Random Forest on a dataset.
+*   **Day 13:** **Unsupervised Learning - Clustering.** Study K-Means, DBSCAN, and Hierarchical Clustering. Learn how to determine optimal cluster count (Elbow method).
+*   **Day 14:** **Weekend Project: Customer Segmentation.** Use the "Mall Customers" dataset. Perform EDA -> Dimensionality Reduction (PCA) -> K-Means Clustering -> Visualize clusters -> Write a business case for each segment.
+
+#### **Week 3: Model Evaluation & Optimization**
+*Focus: Making models robust and fair.*
+
+*   **Day 15:** **Metrics Deep Dive.** Go beyond Accuracy. Master Precision, Recall, F1-Score, ROC-AUC, Confusion Matrices, and PR Curves (crucial for imbalanced data).
+*   **Day 16:** **Hyperparameter Tuning.** Learn Grid Search vs. Random Search vs. Bayesian Optimization (`Optuna` or `Scikit-optimize`). *Exercise: Tune a Random Forest to max accuracy.*
+*   **Day 17:** **Regularization & Prevent Overfitting.** Deep dive into L1 (Lasso) and L2 (Ridge) penalties. Implement Dropout (conceptually) before moving to DL.
+*   **Day 18:** **Dimensionality Reduction II.** PCA vs. t-SNE vs. UMAP. When to use which? Visualize high-dimensional data in 2D/3D.
+*   **Day 19:** **Feature Selection.** Recursive Feature Elimination (RFE) and Correlation analysis. Why fewer features often mean better models.
+*   **Day 20:** **Handling Imbalanced Data.** SMOTE, Undersampling, Class Weights. *Exercise: Balance the credit card fraud dataset.*
+*   **Day 21:** **Month 1 Review & Portfolio.** Polish your GitHub repo for Month 1 projects. Write a technical blog post explaining "How to avoid Overfitting."
+
+#### **Week 4: Neural Networks Fundamentals (The Bridge)**
+*Focus: Transitioning from ML to Deep Learning.*
+
+*   **Day 22:** **Neural Net Basics.** Perceptrons, Activation Functions (Sigmoid, ReLU, Tanh), Forward/Backward propagation manually.
+*   **Day 23:** **Optimizers.** Stochastic Gradient Descent (SGD) vs. Adam. Learning Rate Schedules. Batch Normalization.
+*   **Day 24:** **PyTorch Basics.** Tensors, Autograd, `nn.Module`, Datasets/DataLoaders. Build a "Hello World" MNIST classifier from scratch.
+*   **Day 25:** **Convolutional Neural Networks (CNNs).** Conv layers, Pooling, Stride, Padding. Architecture breakdown of LeNet-5.
+*   **Day 26:** **Transfer Learning.** Freezing base layers vs. Fine-tuning. Load a pretrained ResNet50 and classify flowers.
+*   **Day 27:** **Weekend Project: Image Classifier.** Build an end-to-end CNN for the CIFAR-10 dataset or a custom dataset (e.g., dog vs cat). Optimize the learning rate.
+*   **Day 28:** **Month 1 Capstone Review.** Combine all techniques: Load data -> Clean -> Scale -> Split -> Train Random Forest + XGBoost -> Compare with a simple CNN. Write final report.
+
+---
+
+### 🟡 Month 2: Deep Learning, Vision & NLP (Days 31–60)
+**Goal:** Master PyTorch/TensorFlow for images and text, understanding modern architectures.
+
+#### **Week 5: Advanced Computer Vision (CV)**
+*Focus: State-of-the-art image models.*
+
+*   **Day 31:** **Advanced Architectures.** Study VGG, ResNet (skip connections), EfficientNet, and Inception. Understand why depth is needed.
+*   **Day 32:** **Data Augmentation.** Learn `albumentations` and `torchvision`. Flip, rotate, zoom, and color jitter to prevent overfitting.
+*   **Day 33:** **Object Detection Fundamentals.** Shift from Classification to Bounding Boxes. Study SSD or Faster R-CNN concepts (anchor boxes, IoU).
+*   **Day 34:** **YOLO Implementation.** Use Ultralytics YOLOv8 (industry standard). Train on a small custom dataset (e.g., detecting cars in city photos).
+*   **Day 35:** **Segmentation.** Introduction to U-Net and Mask R-CNN. Apply to medical imaging or satellite imagery.
+*   **Day 36:** **Computer Vision Project Part A.** Build a "Smart Security Camera" that detects specific objects (e.g., masks, helmets) using YOLO.
+*   **Day 37:** **Deployment CV.** Convert PyTorch model to ONNX and then to OpenVINO or TensorRT for faster inference. Wrap in FastAPI.
+
+#### **Week 6: Natural Language Processing (NLP)**
+*Focus: From Words to Sentences.*
+
+*   **Day 38:** **Text Representation.** Bag of Words, TF-IDF vs. Word2Vec vs. GloVe. Visualize word embeddings (t-SNE plots).
+*   **Day 39:** **RNNs & LSTMs/GRUs.** Recurrent architectures for sequences. Sentiment analysis on Twitter data using LSTM.
+*   **Day 40:** **The Transformer Revolution.** Deep dive into Self-Attention mechanisms, Multi-head attention, and Positional Encodings. Read the "Attention is All You Need" paper (abstract + intro).
+*   **Day 41:** **Pretrained Models (BERT).** How BERT works (Masked LM). Using Hugging Face `transformers` library. Tokenization explained.
+*   **Day 42:** **Fine-Tuning BERT.** Take a pre-trained DistilBERT or BERT-base, fine-tune it for a specific task (e.g., Hate Speech Detection or Legal Contract Review).
+*   **Day 43:** **NLP Project Part A.** Build a Sentiment Analysis Dashboard using Streamlit and Fine-tuned BERT. Handle class imbalance.
+
+#### **Week 7: Generative AI & LLMs**
+*Focus: The hottest topic in AI.*
+
+*   **Day 44:** **Generative Models.** GANs (Generative Adversarial Networks) basics: Generator vs Discriminator. StyleGAN concept.
+*   **Day 45:** **Language Models Basics.** GPT architecture recap (Decoder-only). Inference (Autoregressive generation). Sampling strategies (Temperature, Top-k/p).
+*   **Day 46:** **Prompt Engineering & LangChain.** Master advanced prompting (CoT, Few-Shot). Introduction to RAG (Retrieval Augmented Generation).
+*   **Day 47:** **Building an RAG Chatbot.** Use `chromadb` for vector database. Load a PDF/document -> Embed -> Retrieve -> LLM Generate.
+*   **Day 48:** **Fine-tuning LLMs.** PEFT (Parameter Efficient Fine Tuning) / LoRA concept. Fine-tune a small model (like TinyLlama or Phi-2) on a custom dataset.
+*   **Day 49:** **LLM Project Part A.** Build a "Company Knowledge Base Chatbot" using LangChain, LlamaIndex, and an open-source LLM via HuggingFace/Local GPU.
+
+#### **Week 8: Month 2 Capstone & Synthesis**
+*Focus: Combining CV + NLP + Deployment.*
+
+*   **Day 50:** **Project Planning.** Define a complex project: e.g., "Visual Question Answering (VQA)" or "Automated Resume Screener."
+*   **Day 51-53:** **Implementation Sprint.** Build the core pipeline. Integrate CV model (extract image features) + LLM (interpret). Handle edge cases.
+*   **Day 54:** **Optimization & Debugging.** Profile your code. Reduce inference time. Optimize GPU memory usage (`torch.compile`, mixed precision).
+*   **Day 55:** **MLOps Intro - Part 1.** Containerization. Write a robust `Dockerfile` for your app. Push to Docker Hub.
+*   **Day 56:** **MLOps Intro - Part 2.** Deploy via AWS Lambda or Google Cloud Run. Set up CI/CD (GitHub Actions) to test code before deployment.
+*   **Day 57:** **Documentation & Portfolio.** Create a stunning GitHub Readme for this project. Include: Architecture Diagram, Results Charts, "How to Run" guide.
+*   **Day 58-60:** **Rest & Review.** Read papers from the last month. Refactor code for readability. Prepare for Month 3 (Advanced/MLOps).
+
+---
+
+### 🔴 Month 3: MLOps, Advanced Specialization & Job Ready (Days 61–90)
+**Goal:** Productionize models, learn cloud infrastructure, and specialize.
+
+#### **Week 9: MLOps & Cloud Engineering**
+*Focus: Moving from notebook to production system.*
+
+*   **Day 61:** **Model Versioning.** Learn `MLflow` or `DVC`. Track experiments, log metrics/artifacts, register models.
+*   **Day 62:** **Cloud Basics (AWS/GCP).** Navigate AWS Console / GCP Console. Setup IAM roles. S3 buckets vs GCS.
+*   **Day 63:** **SageMaker / Vertex AI.** Learn to train and deploy a model on managed cloud services without managing servers.
+*   **Day 64:** **Kubernetes Basics (K8s).** Understanding Pods, Services, Deployments. How K8s orchestrates ML workloads.
+*   **Day 65:** **CI/CD for ML.** Pipeline setup: Git Push -> Run Tests -> Train Model -> Register Model -> Update Deployment.
+*   **Day 66:** **Monitoring & Drift Detection.** Set up alerts for Data Drift (input data changes) and Concept Drift (predictions lose accuracy). Use Evidently AI or Arize.
+*   **Day 67:** **Weekend Project: Full Pipeline.** Create a GitHub Action that automatically retrains your model when new data is pushed to the repo.
+
+#### **Week 10: Advanced Specialization (Choose 2)**
+*Focus: Go deep into one niche.*
+
+*   **Day 68-69:** **Track A: Reinforcement Learning.** Q-Learning, PPO. Train an agent to play a simple game (CartPole) or navigate a grid world.
+*   **Day 70-71:** **Track B: Time Series Forecasting.** ARIMA vs Prophet vs LSTM vs Transformers for forecasting weather/stock prices. Handle seasonality.
+*   **Day 72-73:** **Track C: Graph Neural Networks (GNN).** Basics of nodes, edges, adjacency matrices. Apply to a social network fraud detection problem.
+*   **Day 74-75:** **Track D: Computer Vision Advanced.** Style Transfer, Image Generation (Stable Diffusion basics), Video Object Tracking.
+*(Pick two tracks based on your interest and study them deeply).*
+
+#### **Week 11: The "Expert" Soft Skills & Interview Prep**
+*Focus: Getting hired or published.*
+
+*   **Day 76:** **System Design for AI.** Practice designing a system: "Design YouTube Recommendation System" or "Design Uber Surge Pricing Model." (Whiteboard practice).
+*   **Day 77:** **Behavioral & Leadership Stories.** Prepare STAR method stories: "Time I fixed a broken model," "Time I handled stakeholder conflict," "Time I mentored a junior."
+*   **Day 78:** **LeetCode + ML Math.** Solve 5 Medium-level algorithmic problems. Review probability/stats interview questions (Expectation, Variance, Central Limit Theorem).
+*   **Day 79:** **Mock Interview.** Record yourself answering "Explain Neural Networks like I'm 5" and "How would you handle this missing data?"
+*   **Day 80:** **Blog Writing.** Write your first high-quality article: "My Journey Building an LLM RAG Bot from Scratch." Publish on Medium/Dev.to.
+*   **Day 81:** **Resume Optimization.** Tailor resume for "AI Engineer" or "ML Scientist." Highlight projects, links to GitHub, and metrics (e.g., "Improved accuracy by 15%").
+
+#### **Week 12: Final Capstone & Launch**
+*Focus: Building the definitive portfolio piece.*
+
+*   **Day 82-84:** **The Grand Finale Project.** Build a complete solution: End-to-end. Data ingestion -> Cleaning -> Feature Engineering -> Model Training (Hybrid Classical + DL) -> MLOps Pipeline -> Web App Interface.
+    *   *Idea:* "AI Health Assistant" that reads medical notes, analyzes patient history images, and predicts risk factors.
+*   **Day 85:** **Code Cleanup.** Add type hinting, docstrings, unit tests (`pytest`), and error handling. Ensure code is PEP8 compliant.
+*   **Day 86:** **Performance Tuning.** Run profiling tools (Py-Spy). Optimize bottlenecks. Parallelize training where possible.
+*   **Day 87:** **Networking.** Reach out to alumni from your university, join local AI meetups, or comment on LinkedIn posts by ML leaders.
+*   **Day 88:** **Open Source Contribution.** Find a beginner-friendly issue in a popular library (scikit-learn, transformers, pandas) and submit a PR (even just fixing documentation).
+*   **Day 89:** **Final Review.** Review your GitHub stats. Ensure all projects have READMEs, badges, and clear instructions.
+*   **Day 90:** **Launch Day.** Apply to jobs, update LinkedIn headline to "ML Engineer | AI Specialist," and send personalized outreach messages to recruiters/hiring managers.
+
+---
+
+### 🚀 Daily Routine Template (For Best Results)
+
+*   **08:00 - 10:00:** **Deep Work (Theory).** Read documentation, read papers, watch lecture videos. No distractions.
+*   **12:00 - 14:00:** **Coding Practice.** Implement algorithms from scratch or solve Kaggle kernels.
+*   **18:00 - 20:00:** **Project Building.** Apply what you learned today to your ongoing project.
+*   **20:00 - 21:00:** **Review & Plan.** Update Jira/Trello, write down 3 things learned, plan tomorrow's tasks.
+
+### 📚 Recommended Resources (Keep these open)
+1.  **Course:** Andrew Ng’s "Machine Learning Specialization" (Coursera) for Week 1-2 theory.
+2.  **Course:** Fast.ai (Practical Deep Learning) for Weeks 5-7 implementation speed.
+3.  **Book:** "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow" by Aurélien Géron (Your bible).
+4.  **Paper Reading:** ArXiv.org (Search relevant papers weekly).
+
+**Remember:** Expertise is not about memorizing code; it's about understanding *why* the model failed and how to fix the data or architecture. Good luck!
